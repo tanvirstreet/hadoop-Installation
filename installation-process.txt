@@ -56,6 +56,10 @@ On Virtual Box Ubunutu LTS 14.04
 
 	sudo apt-get install default-jdk
 
+	sudo apt-add-repository ppa:webupd8team/java
+	sudo apt-get update
+	sudo apt-get install oracle-java8-installer
+
 	java -version
 
 
