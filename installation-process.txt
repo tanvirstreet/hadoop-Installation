@@ -53,9 +53,7 @@ On Virtual Box Ubunutu LTS 14.04
 
 	
 	sudo apt-get update
-
-	sudo apt-get install default-jdk
-
+	
 	sudo apt-add-repository ppa:webupd8team/java
 	sudo apt-get update
 	sudo apt-get install oracle-java8-installer
@@ -123,12 +121,11 @@ On Virtual Box Ubunutu LTS 14.04
 
 	ssh localhost
 
-
+###########################
+#### Switch to hduser #####
+###########################
 
 7. Install Hadoop
-
-
-	su hduser
 
 	wget http://mirrors.sonic.net/apache/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
 
@@ -223,13 +220,17 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
    			<value>file:/usr/local/hadoop_store/hdfs/datanode</value>
  		</property>
 
+
+###########################
+#### Restart your pc  #####
+#### Login into hduser ####
+###########################
+
 9. Format Hadoop filesystem
 
 	hadoop namenode -format
 
 10. Starting Hadoop
-
-	su hduser
 
 	sudo chown -R hduser:hadoop /usr/local/hadoop/
 	
